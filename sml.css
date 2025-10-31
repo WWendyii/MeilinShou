@@ -740,6 +740,37 @@ h2{
 
 
 
+/* Section hover animation */
+.section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0);
+}
+
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 确保其他transform动画不会冲突 */
+.about-left,
+.about-right,
+.education-left,
+.education-right,
+.experience-left,
+.experience-right {
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* 当section悬停时，内部的左右部分保持正常位置 */
+.section:hover .about-left,
+.section:hover .about-right,
+.section:hover .education-left,
+.section:hover .education-right,
+.section:hover .experience-left,
+.section:hover .experience-right {
+  transform: translateX(0);
+}
+
 
 
 
