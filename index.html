@@ -310,15 +310,30 @@
     </div>
   </div>
 </section><br><br><br><br>
+
+
 <!-- Ending -->
-<section>
-  <div style="background-color: rgba(76,73,88,1);"><br>
+<section style="position: relative; z-index: 99;">
+  <div style="background-color: rgba(76,73,88,1); padding-top: 20px;"><br>
     <h2 style="font-size: 34px; color: #f5f5f5; font-family: Big Caslon, serif; text-align: center;">Meilin Shou</h2>
     <b><p class="ending-contact" style="margin-bottom: -10px; font-size: 18px;">Contact me:</p></b>
     <center>
-    <p><a style="text-decoration:none" class="ending-contact" href="mailto:meilinshou@gmail.com">meilinshou@gmail.com </a></p>
-    <p class="ending-contact" style="margin-bottom: -10px; font-size: 18px;">or</p>
-    <p><a style="text-decoration:none" class="ending-contact" href="mailto:meilin.shou@mail.utoronto.ca">meilin.shou@mail.utoronto.ca </a></p>
+      <p>
+        <!-- 加入 onclick 事件，点击时自动复制邮箱并弹窗提示 -->
+        <a style="text-decoration:none; position: relative; z-index: 100; cursor: pointer;" class="ending-contact" 
+           href="mailto:meilinshou@gmail.com" 
+           onclick="navigator.clipboard.writeText('meilinshou@gmail.com'); alert('Email copied to clipboard!');">
+           meilinshou@gmail.com
+        </a>
+      </p>
+      <p class="ending-contact" style="margin-bottom: -10px; font-size: 18px;">or</p>
+      <p>
+        <a style="text-decoration:none; position: relative; z-index: 100; cursor: pointer;" class="ending-contact" 
+           href="mailto:meilin.shou@mail.utoronto.ca"
+           onclick="navigator.clipboard.writeText('meilin.shou@mail.utoronto.ca'); alert('Email copied to clipboard!');">
+           meilin.shou@mail.utoronto.ca
+        </a>
+      </p>
     </center>
     <br><br>
   </div>
