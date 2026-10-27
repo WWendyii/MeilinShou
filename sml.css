@@ -776,8 +776,6 @@ h2{
 
 
 
-
-
 /*ending*/
 
 .ending-contact{
@@ -789,3 +787,85 @@ h2{
 }
 
 
+/* ========================================= */
+/* 新增的简历区块排版美化 (2026版优化)         */
+/* ========================================= */
+
+/* Experience 和 About 中的无序列表排版 */
+.experience-right ul, .about-right ul {
+  list-style-type: none; /* 移除默认圆点，使用自定义修饰 */
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.experience-right li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  line-height: 1.8;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+/* 自定义列表的小圆点样式，更好看 */
+.experience-right li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4c4958;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* 鼠标悬浮时文字颜色微调 */
+.experience-right li:hover {
+  color: #111;
+}
+
+/* 项目链接的动态下划线效果 */
+.section a {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section a:hover {
+  color: #201f25 !important;
+}
+
+/* 保证 CV 简历嵌入框在所有屏幕上完美显示 */
+iframe {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: #f5f5f5; /* 避免加载时出现白边 */
+}
+
+/* 统一卡片中左侧的时间年份间距 */
+.education-left p, .experience-left p {
+  margin-top: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+/* 让经历和教育卡片的紫色背景完全填满左侧 */
+.education-section, .experience-section {
+  padding: 0 !important;
+  gap: 0 !important;
+  overflow: hidden; /* 保证紫色背景不会超出卡片的圆角 */
+}
+
+/* 补偿去掉 gap 后的右侧文字间距 */
+.education-right, .experience-right {
+  padding: 50px 60px !important;
+}
+
+/* 移动端适配：屏幕变窄时上下堆叠，加一点间距 */
+@media (max-width: 768px) {
+  .education-right, .experience-right {
+    padding: 30px !important;
+  }
+}
